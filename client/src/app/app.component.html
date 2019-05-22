@@ -1,26 +1,40 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-            Brand
-        </a>
 
-        <button class="navbar-toggler" type="button">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">World Transfer</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Français
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">English</a>
+            <a class="dropdown-item" href="#">Español</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Menu
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Condition</a>
+            <a class="dropdown-item" href="#">FAQ</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">S'enregistrer</a>
+            <a class="dropdown-item" href="#">S'inscrire</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Langue</a>
-                </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Cone</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <br>
+
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -29,5 +43,89 @@
     {{ responseExpress }}
   </h2>
 </div>
+
+<br>
+
+<h2>
+  Réservez votre taxi depuis / vers l'aéroport.
+</h2>
+
+
+<!-- Booking col-8 -->
+
+
+
+<!-- Fin Booking -->
+
+<!-- Ranking col-4 -->
+
+
+
+<!-- Fin Ranking -->
+
+<router-outlet></router-outlet>
+
+<br>
+<br>
+<br>
+
+<!-- Footer -->
+
+<footer class="footer-bottom bg-warning">
+  <div class="container">
+    <br>
+    <div class="row d-flex align-items-start flex-wrap content">
+      <div class="footer_panel col-12 col-sm-6 col-md-3">
+        <h6>World Transfer</h6>
+        <ul class="list--with-arrows">
+          <li>
+            <a href="#" title="conection">Apropos de nous</a>
+          </li>
+          <li>
+            <a href="#" title="inscription">Contactez-nous</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer_panel col-12 col-sm-6 col-md-3">
+        <h6>World Transfer</h6>
+        <ul class="list--with-arrows">
+          <li>
+            <a href="#" title="emploi">Emploi</a>
+          </li>
+          <li>
+            <a href="#" title="partenaire">Partenaire</a>
+          </li>
+          <li>
+            <a href="#" title="logemp">Connectez-vous en tant que Partenaire</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer_panel col-12 col-sm-6 col-md-3">
+        <h6>Votre compte</h6>
+        <ul class="list--with-arrows">
+          <li>
+            <a href="#" title="conection">S'enregistrer</a>
+          </li>
+          <li>
+            <a href="#" title="inscription">S'inscrire</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer_panel col-12 col-sm-6 col-md-3">
+        <h6>Legal</h6>
+        <ul class="list--with-arrows">
+          <li>
+            <a href="#" title="termes">Termes et Conditions Générales</a>
+          </li>
+          <li>
+            <a href="#" title="politique">Politique de confidentialité</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- End Footer -->
 
 <router-outlet></router-outlet>
