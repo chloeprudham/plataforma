@@ -1,3 +1,18 @@
 div{
   text-align: center;
 }
+
+/*NAVBAR*/
+
+
+
+/*FOOTER*/
+
+.footer_panel {
+  text-align: left;
+}
+
+.list--with-arrows {
+  list-style: none;
+  padding-left: 0;
+}
