@@ -1,0 +1,34 @@
+<section id="login" class="mb-5 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
+        <div class="card_login">
+          <div class="card">
+            <div class="card-body text-center">
+              <form [formGroup]="formLogin" (submit)="onLogin()">
+                <h1 class="h3 mb-3 font-weight-normal" *ngIf="!isError">Login</h1>
+                <div class="alert alert-danger" role="alert" *ngIf="isError">
+                  Something is wrong!
+                </div>
+                <!-- User ID -->
+                <div class="form-group">
+                  <input type="email" id="email" class="form-control" placeholder="Email" formControlName="userMail" required autofocus>
+                </div>
+                <!-- Password -->
+                <div class="form-group">
+                  <input type="password" id="password" class="form-control" placeholder="Password" formControlName="password"
+                         required>
+                </div>
+                <button type="submit" class="btn btn-lg btn-primary btn-block">Se Connecter</button>
+                <br>
+                <div class="form-group">
+                  <a [routerLink]="['/register']" class="btn btn-link">S'Inscrire</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
