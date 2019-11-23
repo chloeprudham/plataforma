@@ -1,31 +1,39 @@
 <div>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">World Transfer</a>
+    <a class="navbar-brand" href="#">City Airport Transfer</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
+
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img src="assets/img/FR.png" alt="profile" class="flag">
             Français
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">English</a>
-            <a class="dropdown-item" href="#">Español</a>
+          <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">
+              <img src="assets/img/EN.png" alt="profile" class="flag">
+              English
+            </a>
+            <a class="dropdown-item" href="#">
+              <img src="assets/img/ESP.png" alt="profile" class="flag">
+              Español
+            </a>
           </div>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Menu
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">Condition</a>
             <a class="dropdown-item" href="#">FAQ</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" routerLink="/login">S'enregistrer</a>
-            <a class="dropdown-item" routerLink="/register">S'inscrire</a>
+            <a class="dropdown-item" routerLink="/login">Connection</a>
+            <a class="dropdown-item" routerLink="/register">Inscription</a>
           </div>
         </li>
       </ul>
@@ -51,10 +59,10 @@
           <h6>World Transfer</h6>
           <ul class="list--with-arrows">
             <li>
-              <a href="#" title="conection">Apropos de nous</a>
+              <a routerLink="/user" title="conection">Apropos de nous</a>
             </li>
             <li>
-              <a href="#" title="inscription">Contactez-nous</a>
+              <a routerLink="/" title="inscription">Contactez-nous</a>
             </li>
           </ul>
         </div>
@@ -65,7 +73,7 @@
               <a routerLink="/" title="emploi">Emploi</a>
             </li>
             <li>
-              <a routerLink="/" title="partenaire">Partenaire</a>
+              <a routerLink="/transporteur" title="partenaire">Devenir Partenaire</a>
             </li>
             <li>
               <a routerLink="/" title="logemp">Connectez-vous en tant que Partenaire</a>
@@ -76,10 +84,10 @@
           <h6>Votre compte</h6>
           <ul class="list--with-arrows">
             <li>
-              <a routerLink="/login" title="/conection">S'enregistrer</a>
+              <a routerLink="/login" title="/conection">Connection</a>
             </li>
             <li>
-              <a routerLink="/register" title="/inscription">S'inscrire</a>
+              <a routerLink="/register" title="/inscription">Inscription</a>
             </li>
           </ul>
         </div>

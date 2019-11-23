@@ -1,25 +1,40 @@
-<div class="d-flex">
+<div class="container-fluid">
 
-  <!-- INFO -->
-  <div class="infobar shadow">
-
-    <!-- LEGEND VEHICULE -->
-    <div class="card text-black-50 bg-light mb-3">
-      <div class="card-header h4">
-        Légende
+  <form class="table" [formGroup]="formVoiture" (ngSubmit)="onVoiture()">
+    <td>
+      <div class="form-group">
+        <input type="text" class="form-control"  placeholder="Type Auto/Bus" formControlName="autoType">
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item bg-valide m-0">Modifier un vehicule.</li>
-        <li class="list-group-item bg-encours m-0">Retirer un vehicule</li>
-      </ul>
-    </div>
+    </td>
+    <td>
+      <div class="form-group">
+        <input type="text" class="form-control"  placeholder="Marque" formControlName="autoMark">
+      </div>
+    </td>
+    <td>
+      <div class="form-group">
+        <input type="text" class="form-control"  placeholder="Modele" formControlName="autoModel">
+      </div>
+    </td>
+    <td>
+      <div class="form-group">
+        <input type="text" class="form-control"  placeholder="Imatriculation" formControlName="autoNdi">
+      </div>
+    </td>
+    <td>
+      <div class="form-group">
+        <input type="number" class="form-control"  placeholder="0" formControlName="autoClient">
+      </div>
+    </td>
+    <td>
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="customFile" formControlName="autoPhoto">
+        <label class="custom-file-label" for="customFile">Choose Photo</label>
+      </div>
+    </td>
+    <td><button type="submit" class="btn btn-primary btn-sm">ADD</button></td>
 
-    <div>
-      <button>Ajouter un vehicule</button>
-    </div>
-  </div>
-
-<!-- LISTE VEHICULE -->
+  </form>
 
   <table class="table table-hover">
   <thead>
@@ -30,9 +45,23 @@
     <th scope="col">N° d'Imatriculation</th>
     <th scope="col">Passagers</th>
     <th scope="col">Photo</th>
-    <th scope="col"></th>
+    <th scope="col">Modification</th>
   </tr>
   </thead>
-  <tbody>
+
+    <tbody>
+    <tr *ngFor="let voiture of voitures;">
+      <td id="carType">{{ voiture.carType }}</td>
+      <td id="carMarque">{{ voiture.carMarque }}</td>
+      <td id="carModele">{{ voiture.carModele }}</td>
+      <td id="carNdi">{{ voiture.carNdi }}</td>
+      <td id="carPeople">{{ voiture.carPeople }}</td>
+      <td id="carPhoto">{{ voiture.carPhoto }}</td>
+      <td id="carDel"><a class="btn btn-sm btn-success">EDIT</a></td>
+      <td id="carDel"><a class="btn btn-sm btn-danger">DELETE</a></td>
+    </tr>
   </tbody>
+
 </table>
+
+</div>

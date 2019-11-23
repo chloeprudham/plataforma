@@ -4,7 +4,14 @@ div{
 
 /*NAVBAR*/
 
+.dropdown-item{
+  text-align: left;
+}
 
+.flag{
+  width: 16px;
+  height: 16px;
+}
 
 /*FOOTER*/
 

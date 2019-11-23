@@ -1,20 +1,53 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
+import { HttpClient } from "@angular/common/http";
 import {ExpressService} from "./express.service";
+import { JwtHelperService } from "@auth0/angular-jwt";
+
+const helper = new JwtHelperService();
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  constructor(
-    private http: HttpClient,
-    private expressService: ExpressService
-  ) {
+  private authToken: string;
+  private user: string;
+
+  constructor(){
+    this.authToken = localStorage.getItem('token');
+    this.user = JSON.parse(localStorage.getItem('user'));
   }
 
-  login(usermail:string, password:string, cb){
+  getToken(){
+    return this.authToken;
+  }
+
+  storeUserData(token, user){
+    localStorage.setItem('token', token);
+    localStorage.setItem('user', JSON.stringify(user));
+    this.authToken = token;
+    this.user = user;
+  }
+
+  public loggedIn(){
+    /*const token = localStorage.getItem('token');
+    return !this.jwtHelper.isTokenExpired(token);*/
+    return !helper.isTokenExpired(this.authToken);
+  }
+
+  logout(){
+    this.authToken = null;
+    this.user = null;
+    localStorage.clear();
+  }
+
+  /*
+  constructor(
+    private http: HttpClient,
+    private expressService: ExpressService,) { }
+
+    login(usermail:string, password:string, cb){
     const content = {
       action: 'login',
       userMail: usermail,
@@ -24,6 +57,7 @@ export class LoginService {
       return cb(res);
     });
   }
+  */
 
 }
 
