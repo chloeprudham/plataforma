@@ -1,0 +1,100 @@
+<div class="container-fluid">
+
+  <h2>Voyager tranquille aux prix raisonable</h2>
+  <br>
+
+
+    <div class="row no-gutters">
+      <div class="col-md-8">
+
+        <!-- BOOKING -->
+        <form [formGroup]="formBooking" (submit)="onBooking()">
+
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label class="font_h7">Prise en charge</label>
+              <input type="email" class="form-control"  placeholder="Départ" formControlName="bookDepart">
+            </div>
+            <div class="form-group col-md-6">
+              <label>Destination</label>
+              <input type="password" class="form-control" placeholder="Arrivée" formControlName="bookArrive">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group col-sm-5">
+              <label>Date de prise en charge</label>
+              <input type="date" class="form-control" placeholder="dd/mm/aa" formControlName="bookDate">
+            </div>
+            <div class="form-group col-sm-3">
+              <label>A quelle heure?</label>
+              <input type="time" class="form-control" placeholder="00" formControlName="bookHeure">
+            </div>
+            <div class="form-group col-sm-2">
+              <label>Passagers</label>
+              <input type="number" class="form-control" placeholder="1" formControlName="bookPassager">
+            </div>
+            <div class="form-group col-sm-2">
+              <label>Valises</label>
+              <input type="number" class="form-control" placeholder="0" formControlName="bookBagage">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-lg btn-primary btn-block">Register</button>
+          <br>
+
+        </form>
+
+      </div>
+      <div class="col-md-4">
+        <div class="card-body">
+
+          <!-- GOOGLE MAP -->
+
+          Google Map
+
+        </div>
+      </div>
+    </div>
+
+  <br>
+
+  <!-- CHOOSE -->
+
+  <div class="card-group col-lg-12">
+    <div class="col-lg-3">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">FREE WAITING TIME</h5>
+        <p class="card-text">Tous nos accueils aux aéroport incluent 60 minutes d'attente, alors que nos accueils dans les autres destinations incluent 15 minutes d'attente gratuit.</p>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">ALL RATES INCLUDED</h5>
+        <p class="card-text">Tous nos prix incluent les taxes, péages et frais de carburant. Nos prix son fiables et pas soumis à des modification soudaines.</p>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">PROFESIONAL DRIVERS</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">EASY BOOKING SYSTEM</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+</div>

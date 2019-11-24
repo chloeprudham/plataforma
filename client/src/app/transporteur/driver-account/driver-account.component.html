@@ -1,0 +1,188 @@
+<!--
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+    </div>
+  </div>
+</div> -->
+<br>
+<h2>
+  Bienvenue sur votre compte City Airport Transfer
+</h2>
+<br>
+
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body bg-light">
+        <form [formGroup]="formCompte" (submit)="onCompte()">
+          <!-- <h1 class="h3 mb-3 font-weight-normal" *ngIf="!isError">Mon Compte</h1> -->
+          <div class="alert alert-danger" role="alert" *ngIf="isError">
+            Something is wrong!
+          </div>
+          <!-- DONNEE PERSONEL -->
+
+          <div class="form-group row">
+            <label class="col-sm-5 col-form-label">Nombre de l'entreprise</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="userEnterprise" placeholder="Nombre de l'Entreprise">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-5 col-form-label">Nom de la Persone</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="userName" placeholder="Nom du contact">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-5 col-form-label">Nom et Numero de Rue</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="userRue" placeholder="123 Rue du Général de Gaulle ">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-5 col-form-label">Ville et Code Postal</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="userVille" placeholder="Paris 75000">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-5 col-form-label">Provence</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="userProvence" placeholder="Ile de France">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-5 col-form-label">Pay</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="userPay" placeholder="France">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-5 col-form-label">Numero de Portable</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="userPhone" placeholder="33 6 12345678">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-5 col-form-label">Email</label>
+            <div class="col-sm-7">
+              <input type="email" class="form-control" id="userMail" placeholder="example@example.com">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-5 col-form-label">Email Departement Comptable</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="userComptable" placeholder="Department Comptable">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-5 col-form-label">Email Paypal</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="userPaypal" placeholder="Compte Paypal">
+            </div>
+          </div>
+
+          <!-- FIN DONNEE PERSONEL -->
+
+          <!-- DONNEE BANCAIRE -->
+
+          <div class="form-group row">
+            <label class="col-sm-5 col-form-label">Nom Titulaire</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="userCompte" placeholder="Titulaire du Compte">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-5 col-form-label">IBAN / Numero du Compte</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="userIban" placeholder="Numero du Compte">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-5 col-form-label">BIC/SWIFT(SWIFT)/Code Banque</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="userBanque" placeholder="Code de la Banque">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-5 col-form-label">Numero TVA</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="userTva" placeholder="TVA">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-5 col-form-label">Numero COC</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="userCoc" placeholder="COC">
+            </div>
+          </div>
+
+          <!-- FIN DONNEE BANCAIRE -->
+
+
+
+
+          <!-- SUBMIT -->
+        </form>
+        <a href="#" class="btn btn-primary">Sauvegarder</a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body bg-light">
+        <form [formGroup]="formPass" (submit)="onPass()">
+          <!-- <h1 class="h3 mb-3 font-weight-normal" *ngIf="!isError">Mon Compte</h1> -->
+          <div class="alert alert-danger" role="alert" *ngIf="isError">
+            Something is wrong!
+          </div>
+
+          <!-- PASSWORD -->
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-5 col-form-label">Password</label>
+            <div class="col-sm-7">
+              <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            </div>
+          </div>
+
+          <!-- NEW PASSWORD -->
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-5 col-form-label">New Password</label>
+            <div class="col-sm-7">
+              <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-5 col-form-label">Confirm Password</label>
+            <div class="col-sm-7">
+              <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            </div>
+          </div>
+
+          <!-- SUBMIT -->
+        </form>
+        <a href="#" class="btn btn-primary">Modifier</a>
+      </div>
+    </div>
+  </div>
+</div>
+
